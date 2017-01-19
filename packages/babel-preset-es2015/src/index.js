@@ -74,7 +74,7 @@ function preset(context, opts = {}) {
       [transformES2015Destructuring, optsLoose],
       transformES2015BlockScoping,
       transformES2015TypeofSymbol,
-      modules === "commonjs" && [transformES2015ModulesCommonJS, optsLoose],
+      modules === "commonjs" && [transformES2015ModulesCommonJS, { loose, strict: false }],
       modules === "systemjs" && [transformES2015ModulesSystemJS, optsLoose],
       modules === "amd" && [transformES2015ModulesAMD, optsLoose],
       modules === "umd" && [transformES2015ModulesUMD, optsLoose],
